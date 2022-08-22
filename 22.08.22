@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+void rowSum(int arr[10][10], int m, int n);
+
+int main()
+{
+ 	int a[10][10], m,n;                    
+  
+ 	printf("\n Enter Number of rows and columns  :  ");
+ 	scanf("%d %d", &m, &n);                  
+ 
+ 	printf("\n Enter the elements in to the Matrix \n");
+ 	for(int i = 0; i < m; i++)               
+  	{
+   		for(int j= 0; j < n; j++)
+    	        {
+      		scanf("%d", &a[i][j]);
+    	        }
+  	}
+    for(int i = 0; i < m; i++)               
+  	{
+   		for(int j= 0; j < n; j++)
+    	        {
+      		printf("%d ",a[i][j]);
+    	        }
+  	}
+    printf("\nRow Sum\n");
+   
+} 
+
+void rowSum(int arr[10][10], int m, int n)      
+{
+		
+ 	for(int i = 0; i < m; i++)
+  	{
+  	    int rsum=0;
+  		for(int j = 0;j < n; j++)
+  		{
+  			rsum = rsum + arr[i][j];  			
+		}
+		printf("\nThe Sum of Elements of row %d is %d",i+1,sum );
+        }
+}
